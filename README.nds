@@ -1,0 +1,11 @@
+This is a hacked up version of the PCRE library.  Note, this is *not* an
+official PCRE distribution, and as such, don't go to them for support.
+
+Anyway, to build, make sure your environment is set up to use devkitarm 
+correctly, and then do a 'make'.  To install:
+
+1. Copy lib/libpcre9.a to libnds/lib
+2. Copy include/pcre.h to libnds/include
+3. Optionally copy include/pcreposix.h to libnds/include.
+
+Brett Kosinski <fancypantalons@gmail.com>

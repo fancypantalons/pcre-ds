@@ -1,0 +1,14 @@
+-include $(DEVKITARM)/base_rules
+
+CFLAGS	:=	$(BASEFLAGS) $(ARM9FLAGS) $(ARM9INC) -DHAVE_CONFIG_H
+ASFLAGS :=	$(ARM9FLAGS)
+VPATH	:=	$(ARM9_VPATH)
+DEPSDIR	:=	$(DEPENDS)/arm9
+
+$(LIBDIR)/libpcre9.a:	$(ARM9OBJS)
+
+-include $(DEPSDIR)/*.d
+
+%.o	:	%.bin
+	@echo $(notdir $<)
+	@$(bin2o)
